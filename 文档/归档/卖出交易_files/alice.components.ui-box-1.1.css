@@ -1,0 +1,23 @@
+.ui-box{border:1px solid #ccc}
+.ui-box-green{border:1px solid #a0c96f}
+.ui-box-orange{border:1px solid #d5c5b1}
+.ui-box-gray{border:1px solid #e6e6e6}
+.ui-box-light{border:1px solid #d9d9d9}
+.ui-box-follow{border-top:0}
+.ui-box-title{border-bottom:1px solid #ccc;position:relative}
+.ui-box-title-border{border:1px solid #fff;height:14px;line-height:16px;overflow:hidden;padding:9px 10px 10px;*padding:9px 10px 10px;padding:9px 10px\0}
+.ui-box-title h3{color:#656565;font-size:14px;font-weight:700;float:left;display:inline}
+.ui-box-title .ui-box-title-setting{float:right;display:inline;width:16px;height:16px;line-height:16px;background:transparent url(https://img.alipay.com/sys/personal/style/ui-components.png) no-repeat -2px -2px;text-indent:-9999px;overflow:hidden;cursor:pointer}
+.ui-box-title .ui-box-title-setting:hover{background:transparent url(https://img.alipay.com/sys/personal/style/ui-components.png) no-repeat -29px -2px}
+.ui-box-title .ui-box-title-more{float:right}
+.ui-box-title .ui-box-title-link{float:left;display:inline;margin:0 0 0 15px}
+.ui-box-title .ui-box-title-text{margin-left:10px;color:#808080}
+.ui-box-container{background:#fff}
+.ui-box-content{padding:10px 10px 15px}
+.ui-box-green .ui-box-container{background:#efffe2;border:0}
+.ui-box-orange .ui-box-container{background:#f9f0e4;border:0}
+.ui-box-gray .ui-box-container{background:#fafafa;border:0}
+.ui-box-nocontainer{border-bottom:0;overflow:hidden;_position:relative;height:36px}
+.ui-box-nocontainer .ui-box-container{opacity:0}
+.ui-box-light .ui-box-title{border-bottom:1px solid #d9d9d9;color:#4d4d4d}
+.ui-box-light .ui-box-title-border{border:0;height:16px;padding-left:20px}

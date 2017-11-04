@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://mbillexprod.alipay.com/enterprise/tradeListQuery.htm -->
+<html class="enterprise-portal"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+  
+  <meta name="data-aspm" content="a226">  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>卖出交易</title>
+
+    <!-- FD:151:morderprod/sp/uitpl/component/favicon.vm:START --><link rel="icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon"><!-- FD:151:morderprod/sp/uitpl/component/favicon.vm:END -->        <!-- FD:151:morderprod/sp/uitpl/component/trackerTime.vm:START --><link href="https://a.alipayobjects.com/" rel="dns-prefetch">
+<link href="https://app.alipay.com/" rel="dns-prefetch">
+<link href="https://my.alipay.com/" rel="dns-prefetch">
+<link href="https://lab.alipay.com/" rel="dns-prefetch">
+<link href="https://cashier.alipay.com/" rel="dns-prefetch">
+<link href="https://financeprod.alipay.com/" rel="dns-prefetch">
+<link href="https://shenghuo.alipay.com/" rel="dns-prefetch">
+
+  <!-- FD:106:alipay/tracker/iconfont.vm:START --><style>
+@font-face {
+    font-family: "rei";
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616"); /* IE9 */
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://i.alipayobjects.com/common/fonts/rei.woff?20150616") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.ttf?20150616")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.svg?20150616#rei") format("svg"); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"rei";
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+</style>
+<!-- FD:106:alipay/tracker/iconfont.vm:END -->
+<!-- FD:106:alipay/tracker/seajs.vm:START -->
+
+
+<!-- monitor 防错代码 -->
+<script type="text/javascript" async="" charset="utf-8" src="./卖出交易_files/core.php"></script><script>
+(function(win){
+  if(!win.monitor){win.monitor = {};}
+
+  var METHODS = ["lost", "log", "error", "on", "off"];
+
+  for(var i=0,method,l=METHODS.length; i<l; i++){
+    method = METHODS[i];
+    if("function" !== typeof win.monitor[method]){
+      win.monitor[method] = function(){};
+    }
+  }
+})(window);
+</script>
+
+<!-- seajs以及插件 -->
+<script charset="utf-8" crossorigin="anonymous" id="seajsnode" onerror="window.monitor &amp;&amp; monitor.lost &amp;&amp; monitor.lost(this.src)" src="./卖出交易_files/saved_resource"></script>
+
+<!-- seajs config 配置 -->
+<script>
+seajs.config({
+  alias: {
+    '$': 'jquery/jquery/1.7.2/jquery',
+    '$-debug': 'jquery/jquery/1.7.2/jquery',
+    'jquery': 'jquery/jquery/1.7.2/jquery',
+    'jquery-debug': 'jquery/jquery/1.7.2/jquery-debug',
+    'seajs-debug': 'seajs/seajs-debug/1.1.1/seajs-debug'
+  },
+  crossorigin: function(uri){
+
+    function typeOf(type){
+	  return function(object){
+	    return Object.prototype.toString.call(object) === '[object ' + type + ']';
+	  }
+	}
+	var isString = typeOf("String");
+	var isRegExp = typeOf("RegExp");
+
+	var whitelist = [];
+
+  whitelist.push('https://a.alipayobjects.com/');
+
+	for (var i=0, rule, l=whitelist.length; i<l; i++){
+	  rule = whitelist[i];
+	  if (
+	    (isString(rule) && uri.indexOf(rule) === 0) ||
+	    (isRegExp(rule) && rule.test(uri))
+		) {
+
+	    return "anonymous";
+	  }
+	}
+  },
+  vars: {
+    locale: 'zh-cn'
+  }
+});
+</script>
+
+<!-- 兼容原有的 plugin-i18n 写法 -->
+<!-- https://github.com/seajs/seajs/blob/1.3.1/src/plugins/plugin-i18n.js -->
+<script>
+seajs.pluginSDK = seajs.pluginSDK || {
+  Module: {
+    _resolve: function() {}
+  },
+  config: {
+    locale: ''
+  }
+};
+// 干掉载入 plugin-i18n.js，避免 404
+seajs.config({
+  map: [
+	[/^.*\/seajs\/plugin-i18n\.js$/, ''],
+	[/^.*\i18n!lang\.js$/, '']
+  ]
+});
+</script>
+
+<!-- 路由旧 ID，解决 seajs.use('select/x.x.x/select') 的历史遗留问题 -->
+<script>
+(function(){
+
+var JQ = '/jquery/1.7.2/jquery.js';
+seajs.cache['https://a.alipayobjects.com:443/gallery' + JQ] = seajs.cache['https://a.alipayobjects.com:443/jquery' + JQ];
+
+var GALLERY_MODULES = [
+  'async','backbone','coffee','cookie','es5-safe','handlebars','iscroll',
+  'jasmine','jasmine-jquery','jquery','jquery-color','json','keymaster',
+  'labjs','less','marked','moment','mustache','querystring','raphael',
+  'socketio','store','swfobject','underscore','zepto','ztree'
+];
+
+var ARALE_MODULES = [
+  'autocomplete','base','calendar','class','cookie','dialog','easing',
+  'events','iframe-uploader','iframe-shim','messenger','overlay','popup',
+  'position','select','switchable','tip','validator','widget'
+];
+
+var util = {};
+util.indexOf = Array.prototype.indexOf ?
+  function(arr, item) {
+    return arr.indexOf(item);
+  } :
+  function(arr, item) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === item) {
+        return i;
+      }
+    }
+    return -1;
+  };
+util.map = Array.prototype.map ?
+  function(arr, fn) {
+    return arr.map(fn);
+  } :
+  function(arr, fn) {
+    var ret = [];
+	for (var i = 0; i < arr.length; i++) {
+        ret.push(fn(arr[i], i, arr));
+    }
+    return ret;
+  };
+
+function contains(arr, item) {
+  return util.indexOf(arr, item) > -1
+}
+
+function map(id) {
+  id = id.replace('#', '');
+
+  var parts = id.split('/');
+  var len = parts.length;
+  var root, name;
+
+  // id = root/name/x.y.z/name
+  if (len === 4) {
+    root = parts[0];
+    name = parts[1];
+
+    // gallery 或 alipay 开头的没有问题
+    if (root === 'alipay' || root === 'gallery') {
+      return id;
+    }
+
+    // arale 开头的
+    if (root === 'arale') {
+      // 处理 arale/handlebars 的情况
+      if (contains(GALLERY_MODULES, name)) {
+        return id.replace('arale/', 'gallery/');
+      } else {
+        return id;
+      }
+    }
+  }
+  // id = name/x.y.z/name
+  else if (len === 3) {
+    name = parts[0]
+
+    // 开头在 GALLERY_MODULES 或 ARALE_MODULES
+    if (contains(GALLERY_MODULES, name)) {
+      return 'gallery/' + id;
+    } else if (contains(ARALE_MODULES, name)) {
+      return 'arale/' + id;
+    }
+  }
+
+  return id;
+}
+
+var _use = seajs.use;
+
+seajs.use = function(ids, callback) {
+  if (typeof ids === 'string') {
+    ids = [ids];
+  }
+
+  ids = util.map(ids, function(id) {
+    return map(id);
+  });
+
+  return _use(ids, callback);
+}
+
+})();
+</script>
+<!-- FD:106:alipay/tracker/seajs.vm:END -->
+<script>
+  console.log("true")
+</script>
+
+<!-- FD:151:morderprod/sp/uitpl/component/trackerTime.vm:END -->
+    
+          <link charset="utf-8" rel="stylesheet" href="./卖出交易_files/mi.css" media="all">
+<link charset="utf-8" rel="stylesheet" href="./卖出交易_files/alice.components.ui-box-1.1.css" media="all">
+<link charset="utf-8" rel="stylesheet" href="./卖出交易_files/selectmenu.css" media="all">
+<link charset="utf-8" rel="stylesheet" href="./卖出交易_files/common.css" media="all">
+<link charset="utf-8" rel="stylesheet" href="./卖出交易_files/patch.css" media="all">
+    
+                <link charset="utf-8" rel="stylesheet" href="./卖出交易_files/OgPAgbONDiKhITIVYmdn.css"></head>
+<!--[if lt IE 7]><body class="ie6 "  data-aspm="b2418" ><![endif]-->
+<!--[if IE 7]><body class="ie7 "  data-aspm="b2418" ><![endif]-->
+<!--[if IE 8]><body class="ie8 "  data-aspm="b2418" ><![endif]-->
+<!--[if IE 9]><body class="ie9 "  data-aspm="b2418" ><![endif]-->
+<!--[if !IE]><!--><body class="" data-aspm="b2418"><!--<![endif]-->
+<script type="text/javascript">
+  AralePreload = [];
+  var AP = AP || {};
+  AP.PageVar = {
+    app_domain:"https://mbillexprod.alipay.com:443",
+    appstore_domain: "",
+    personal_domain:"https://lab.alipay.com:443",
+    personalprod_domain:"",
+    mipgw_domain:"",
+    ccrprod_domain:"",
+    zhangdan_domain:"",
+    benefits_domain:"",
+    image_domain:"https://img.alipay.com:80",
+    communityweb_domain: "",
+    tfs_domain:"",
+    benefitprod_domain:"$benefitprodServer"
+  }
+</script>
+<!-- FD:151:morderprod/sp/nav/blacknav/enterprise.vm:START -->
+
+
+
+
+
+
+                
+
+
+
+
+
+<!-- FD:151:morderprod/sp/nav/head/uribroker.vm:START -->
+<script>
+window.GLOBAL = (window.GLOBAL || {});
+</script>
+<!-- CMS:全站公共 cms/nav/uribroker.vm开始:alipay/nav/uribroker.vm -->    <script type="text/javascript">
+  window.GLOBAL || (GLOBAL = {});
+  GLOBAL.system = {};
+   GLOBAL.system["assetsServer"] = "https://a.alipayobjects.com"; GLOBAL.system["apimgServer"] = "https://i.alipayobjects.com"; GLOBAL.system["personalportalServer"] = "https://my.alipay.com"; GLOBAL.system["personalServer"] = "https://lab.alipay.com"; GLOBAL.system["personalprodServer"] = "https://shenghuo.alipay.com"; GLOBAL.system["memberprodServer"] = "https://memberprod.alipay.com"; GLOBAL.system["tfsImageServer"] = "https://tfs.alipayobjects.com"; GLOBAL.system["merchantwebServer"] = "https://shanghu.alipay.com"; GLOBAL.system["authCenterServer"] = "https://auth.alipay.com"; GLOBAL.system["securityServer"] = "https://securitycenter.alipay.com"; GLOBAL.system["tradecmtServer"] = "https://pingjia.alipay.com"; GLOBAL.system["appstoreServer"] = "https://app.alipay.com"; GLOBAL.system["zhangdanServer"] = "https://zd.alipay.com"; GLOBAL.system["uninavServer"] = "https://uninav.alipay.com"; GLOBAL.system["pucprodServer"] = "https://jiaofei.alipay.com"; GLOBAL.system["benefitprodServer"] = "https://zht.alipay.com"; GLOBAL.system["enterpriseportalServer"] = "https://enterpriseportal.alipay.com"; GLOBAL.system["couriercoreServer"] = "https://couriercore.alipay.com"; GLOBAL.system["uemprodServer"] = "https://uemprod.alipay.com"; GLOBAL.system["bizfundprodServer"] = "https://bizfundprod.alipay.com"; GLOBAL.system["morderprodServer"] = "https://b.alipay.com"; GLOBAL.system["consumeprodServer"] = "https://consumeprod.alipay.com"; GLOBAL.system["emembercenterServer"] = "https://emembercenter.alipay.com"; GLOBAL.system["crmhomeServer"] = "https://e.alipay.com"; GLOBAL.system["cshallServer"] = "https://cshall.alipay.com"; GLOBAL.system["openhomeServer"] = "https://openhome.alipay.com"; GLOBAL.system["yebprodServer"] = "https://yebprod.alipay.com"; GLOBAL.system["financeprodServer"] = "https://financeprod.alipay.com"; GLOBAL.system["goldetfprodServer"] = "https://goldetfprod.alipay.com"; GLOBAL.system["certifyServer"] = "https://certify.alipay.com"; GLOBAL.system["securitycenterServer"] = "https://securitycenter.alipay.com"; GLOBAL.system["couponwebServer"] = "https://hongbao.alipay.com"; GLOBAL.system["pointprodServer"] = "https://jf.alipay.com"; GLOBAL.system["pcreditprodServer"] = "https://huabei.alipay.com"; GLOBAL.system["cardServer"] = "https://card.alipay.com"; GLOBAL.system["membercenterServer"] = "https://accounts.alipay.com"; GLOBAL.system["custwebServer"] = "https://custweb.alipay.com"; GLOBAL.system["zcbprodServer"] = "https://zcbprod.alipay.com";  </script>
+    <!-- CMS:全站公共 cms/nav/uribroker.vm结束:alipay/nav/uribroker.vm -->
+<script>
+(function() {
+
+window.GLOBAL = window.GLOBAL || {};
+var sys = window.GLOBAL.system = window.GLOBAL.system || {};
+
+  sys.mbillexprodServer = sys.mbillexprodServer || 'https://mbillexprod.alipay.com';
+  sys.bizfundprodServer = 'https://bizfundprod.alipay.com';
+
+  if (!sys.enterpriseportalServer) {
+    sys.enterpriseportalServer = 'https://enterpriseportal.alipay.com';
+  }
+
+})();
+</script>
+<!-- FD:151:morderprod/sp/nav/head/uribroker.vm:END -->
+
+<style>
+.more .drop-list {
+  width: 90px !important;
+}
+
+.more .links a {
+  width: 50px !important;
+}
+
+@font-face {
+  font-family: "rei";
+  src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20140606"); /* IE9 */
+  src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20140606#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://i.alipayobjects.com/common/fonts/rei.woff?20140606") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+  url("https://i.alipayobjects.com/common/fonts/rei.ttf?20140606")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  url("https://i.alipayobjects.com/common/fonts/rei.svg?20140606#rei") format("svg"); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"rei";
+  font-style: normal;
+  font-weight: normal;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'spIconfont';
+  src: url('//at.alicdn.com/t/font_ja0odlt4d8fflxr.eot');
+  src: url('//at.alicdn.com/t/font_ja0odlt4d8fflxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_ja0odlt4d8fflxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_ja0odlt4d8fflxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_ja0odlt4d8fflxr.svg#iconfont') format('svg');
+}
+
+.enterprise-portal .spIconfont {
+  font-family:"spIconfont";
+  font-style: normal;
+  font-weight: normal;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mpHelpWrap {
+  position: relative;
+  overflow: visible;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0;
+  float: left;
+}
+.mpHelpContent {
+  display: none;
+  position: absolute;
+  top: 29px;
+  right: 0;
+  width: 280px;
+  background-color: #313031;
+  padding: 5px 0;
+  line-height: 2;
+  font-size: 12px;
+  color: #fff;
+  font-family: "Microsoft YaHei", 'Segoe UI', Tahoma, sans-serif;
+}
+.mpHelpWrap:hover .mpHelpContent {
+  display: block;
+}
+.accounts .mpHelpWrap .link:hover,
+.accounts .mpHelpWrap:hover .link {
+  color: #fff;
+}
+.mpHelpLink,
+.mpHelpOnlineService {
+  display: block;
+  padding: 10px 15px;
+  line-height: 1;
+  color: #fff;
+  font-size: 14px;
+}
+.mpHelpLink:hover,
+.mpHelpOnlineService:hover {
+  background-color: #1c1c1c;
+  color: #fff;
+  text-decoration: none;
+}
+.mpHelpOnlineWrap {
+  padding: 10px 15px 10px;
+  position: relative;
+}
+.mpHelpOnlineWrap:before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #595959;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 4px;
+}
+.mpHelpOnlineLabel {
+  display: block;
+  color: #9F9F9F;
+  font-size: 12px;
+}
+.mpHelpOnlinePhone {
+  font-size: 18px;
+  font-weight: normal;
+}
+.mpHelpOnlineServiceTime {
+  font-size: 12px;
+}
+.mi-header * {
+  box-sizing: content-box;
+}
+</style>
+
+
+<link charset="utf-8" rel="stylesheet" href="./卖出交易_files/enterprise.css" media="all">
+
+<style type="text/css">
+/* 返回旧版浮动层样式 */
+.main_content {height:120px; background: url("https://i.alipayobjects.com/e/201312/1ib4ndzftN.png") no-repeat 20px 0px; font-size: 14px; color: #4d4d4d; }
+.main_content .text {margin-top: 30px;}
+.main_content div {margin: 0 0 10px 140px;}
+.main_content p {line-height: 22px;}
+/* 新版logo样式覆盖 */
+.mi-nav .logo{padding-left:0}
+.fnn-hide {display:none !important;}
+</style>
+
+<script id="J_backToOldUrlBox" type="text/html">
+  <div class="mi-dialog-header">
+    <h3 class="mi-dialog-title">请帮助我们成长</h3>
+  </div>
+  <div class="main_content">
+    <div class="text">Hi，如果使用时有任何不满意，</div>
+    <div><p>请告诉我们，我们会做的更好！<a href="https://egg.alipay.com/egg/index.htm?pid=352" target="_blank">提建议></a></p></div>
+  </div>
+  <div class="mi-dialog-footer">
+    <div class="mi-dialog-footer-cnt">
+      <span class="mi-button mi-button-sblue">
+        <button class="mi-button-text" id="J_cancelBackToOldBtn">继续使用</button>
+      </span>
+      <span class="mi-button mi-button-swhite">
+        <button class="mi-button-text" id="J_backToOldBtn">返回旧版本</button>
+      </span>
+    </div>
+  </div>
+</script>
+
+<input id="J_globalMenuPath" type="hidden" value="MC_TRADE_CENTER/000|101|101">
+
+<div id="J_browserUpgrade" class="browser-upgrade fn-hide">
+  <div class="fn-clear mi-header-cnt">
+    <div class="upgrade-content">
+      <i class="iconfont" title="警告">&#61511;</i>
+      亲爱的用户，您当前使用的浏览器版本过低，请您
+      <a href="https://www.alipay.com/x/kill-ie.htm" target="_blank">升级浏览器</a>
+      ，以便能够正常地使用本产品！
+      <a id="J_closeUpgrade" class="close-upgrade" href="javascript:void(0);">×</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="J_header" class="mi-header">
+  <div class="fn-clear mi-header-cnt">
+        <div class="welcome">
+                                                                      </div>
+        <div class="fn-clear accounts">
+            <div title="" id="J_simpleContent" class="item fn-hide">
+        <label class="label fn-left"></label>
+        <div data-role="J_helpLink" class="logout fn-right">
+          <a class="link logout-link ent-uri-placeholder" href="https://cshall.alipay.com/enterprise/index.htm" target="_blank">帮助中心</a>
+        </div>
+        <div class="logout fn-right">
+          <a id="J_logoutUrl2" class="link logout-link ent-uri-placeholder highlightLink" href="https://enterpriseportal.alipay.com/logout.htm">退出</a>
+        </div>
+      </div>
+            <div title="" id="J_blockedContent" class="item fn-hide">
+        <div data-role="J_helpLink" class="logout fn-right">
+          <a class="link logout-link" href="https://cshall.alipay.com/enterprise/index.htm" target="_blank">帮助中心</a>
+        </div>
+        <div class="logout fn-right">
+          <a id="J_logoutUrl2" class="link logout-link ent-uri-placeholder highlightLink" href="https://enterpriseportal.alipay.com/logout.htm">退出</a>
+        </div>
+        <label class="label pt7"><a id="J_jumpOutUrl" href="https://lab.alipay.com/user/i.htm" class="ent-uri-placeholder highlightLink"></a></label>
+      </div>
+            <div id="J_accounts" class="item">
+                <div id="J_info" class="info __login_info" title="">
+          <a title="陕西视讯通信有限公司" id="J_accountHomeUrl" class="link account-link icon-info ent-uri-placeholder" href="https://uemprod.alipay.com/user/account/index.htm"><span id="J_firmName">陕西视讯通信有限公司</span></a>
+
+          <div class="drop-list">
+            <div class="detail">
+              <div class="receive-account">
+                <span id="J_entLoadError" class="ent-load fn-hide">数据获取失败，<a id="J_reloadEnt" href="javascript:void(0);">重新加载</a> ...</span>
+                <div class="nickname-info">
+                  <a id="J_nickNameUrl" href="https://uemprod.alipay.com/user/account/index.htm" class="ent-uri-placeholder fn-hide">
+                    <span id="J_nickName" class="nickname"></span>
+                  </a>
+                  <a id="J_nickNameUrl2" href="https://uemprod.alipay.com/user/account/index.htm" class="ent-uri-placeholder" title="13396508087@189.cn">
+                    <strong id="J_accountEmail" class="current">13396508087@189....</strong>
+                  </a>
+                </div>
+                <div class="ent-name">
+                  <span id="J_entName" title="陕西视讯通信有限公司">陕西视讯通信有限公司</span>
+                </div>
+              </div>
+              <div class="related-account">
+                                                <a id="J_approveManageUrl" href="https://uemprod.alipay.com/workflow/myApplyBillManager.htm" class="ent-uri-placeholder">审批管理</a>
+                              
+                                  <a id="J_accountManageUrl" href="https://uemprod.alipay.com/user/account/index.htm" class="ent-uri-placeholder">账户管理</a>
+                                    <a id="J_associatedAccountUrl" href="https://uemprod.alipay.com/user/associatedAccount/admin.htm" class="ent-uri-placeholder">关联账户</a>
+                                  
+                                  <a id="J_personalAccountUrl" href="https://emembercenter.alipay.com/console/account/personInfo.htm" class="ent-uri-placeholder fn-hide">个人信息</a>
+                                              </div>
+              <div class="last-login-time">
+                上次登录时间 <span id="J_lastLoginTime">2017-10-25 20:12</span>
+              </div>
+            </div>
+
+            <div class="other" id="J_otherInfo">
+              <div id="J_amountCnt" class="balance amount-cnt">
+                可用余额<em id="J_amount" class="amount"></em>元
+              </div>
+              <a id="J_viewBalance" class="balance view-balance" href="javascript:void(0);">显示余额</a>
+                              <div class="tools">
+                  <a id="J_rechargeUrl" href="https://bizfundprod.alipay.com/allocation/deposit/index.htm" class="ent-uri-placeholder">充值</a><em class="ft-bar">|</em>
+                  <a id="J_takeOutCashUrl" href="https://bizfundprod.alipay.com/payment/paytobankcard/index.htm?transferType=RELATED" class="ent-uri-placeholder">提现</a><em class="ft-bar">|</em>
+                  <a id="J_transferUrl" href="https://bizfundprod.alipay.com/payment/transfer/index.htm" class="ent-uri-placeholder">转账</a>
+                </div>
+                          </div>
+
+          </div>
+        </div>
+        <div id="J_logout" class="logout __login_info">
+          <a id="J_logoutUrl" class="link logout-link ent-uri-placeholder" href="https://enterpriseportal.alipay.com/logout.htm">退出</a>
+        </div>
+                        <div class="nav-gap __login_info">|</div>
+            <div id="J_service" class="more __login_info">
+              <a class="link icon-more" href="javascript:void(0);">我的商家服务</a>
+              <div class="drop-list">
+                <ul class="fn-clear links"><li><a class="ent-uri-placeholder" target="_blank" href="https://enterpriseportal.alipay.com/portal/navDispatch.htm?menuTitle=mc.tradeCenter">对账中心</a></li><li><a class="ent-uri-placeholder" target="_blank" href="https://b.alipay.com/signing/productSet.htm?navKey=all">产品中心</a></li><li><a class="ent-uri-placeholder" target="_blank" href="https://market.alipay.com/activity/enter.htm">运营中心</a></li><li><a class="ent-uri-placeholder" target="_blank" href="https://enterpriseportal.alipay.com/index.htm">我的商家服务</a></li></ul>
+              </div>
+            </div>
+                    
+        <div id="J_login" class="logout fnn-hide">
+          <a class="link logout-link ent-uri-placeholder _is_login" href="https://auth.alipay.com/login/index.htm?&amp;goto=https%3A%2F%2Fenterpriseportal.alipay.com%2Findex.htm">登录</a>
+        </div>
+        <div id="J_register" class="logout fnn-hide">
+          <a class="link logout-link ent-uri-placeholder" href="https://lab.alipay.com/user/reg/index.htm">注册</a>
+        </div>
+
+        <div class="nav-gap">|</div>
+        <div id="J_ruleLink" class="logout">
+          <a class="link logout-link" href="https://mrchportalweb.alipay.com/settling/selfhelp/accessGuide.htm" target="_blank">接入指引</a>
+        </div>
+        <div class="nav-gap">|</div>
+        <div id="J_openPlatform" class="logout">
+          <a class="link logout-link" href="https://open.alipay.com/platform/home.htm" target="_blank">开放平台</a>
+        </div>
+
+                  <div class="nav-gap">|</div>
+                    <div data-role="J_helpLink" class="logout">
+            <a class="link logout-link" href="https://cshall.alipay.com/enterprise/index.htm" target="_blank">帮助中心</a>
+          </div>
+                  
+                <div title="消息" id="J_msgTip" class="message " data-itemlist="listNode:J_msgTipUl">
+          <a title="消息" id="J_couriercoreTopUrl" class="link message-link icon-message ent-uri-placeholder" href="https://couriercore.alipay.com/messager/enterprise/index.htm"></a>
+
+          <div class="drop-list">
+            <div class="msg-title">
+              <span id="J_msgLoadError" class="msg-load fn-hide">数据获取失败，<a id="J_reloadMsg" href="javascript:void(0);">重新加载</a>...</span>
+              <span id="J_msgTipTitle" class="msg-tip">
+                <a id="J_approveTitleUrl" class="ent-uri-placeholder approveMsg" href="https://uemprod.alipay.com/workflow/myApprovalManager.htm">你有<strong id="J_approveMsgCount" class="ft-bold ft-link">0</strong>单据待审批</a>
+              </span>
+            </div>
+          </div>
+        </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+// 用URIBroker将URL替换成当前环境的真实URL
+(function replaceServer() {
+  function addParam(link, key, value) {
+    var iHash = link.indexOf('#'),
+      hash = iHash >= 0 ? link.substr(iHash, link.length) : '';
+
+    link = link.replace(/#.*$/, '').replace(new RegExp('&?' + key + '=[^&]*'), '');
+
+    return [
+    link,
+    link.indexOf('?') >= 0 ? '&' : '?',
+    key + '=' + encodeURIComponent(value),
+    hash
+    ].join('');
+  }
+
+  if(window.GLOBAL && window.GLOBAL.system && window.jQuery){
+    var sys = window.GLOBAL.system;
+
+    var aNode, h, head, nodes = jQuery('.ent-uri-placeholder');
+    nodes.shift = Array.prototype.shift;
+    while(aNode = nodes.shift()){
+      h = aNode.getAttribute('data-href') || aNode.href;
+      if(h && (h = h.split('@')) && h.length > 1) {
+        head = h.shift().split('/');
+        head = head[head.length-1];
+        if(head = sys[head]){
+          if(head.substr(head.length-1) == '/') head = head.substr(head.length-1);
+          h.unshift(head);
+          aNode.href = h.join('');
+          aNode.removeAttribute('data-href');
+        }
+      }
+
+      if (h && jQuery(aNode).hasClass('_is_login')) {
+        aNode.href = addParam(aNode.href, 'goto', sys['enterpriseportalServer'] + '/index.htm');
+      }
+    }
+  }
+
+  replaceServer.times = (replaceServer.times || 0) + 1;
+  if (replaceServer.times < 30) {
+    setTimeout(replaceServer, 1000);
+  }
+})();
+
+//IE8
+(function(){
+  var noop = function(){};
+  window.console = (window && window.console && window.console.log) ? window.console : {
+  log: noop,
+  warn: noop,
+  error: noop,
+  info: noop
+  };
+})();
+
+// 黑条导航和二级导航的加载逻辑
+seajs.use(['$',"enterpriseportal/globalNav2/2.0.1/globalNav"],function($,glb){
+  var nav = new glb({
+    useGoBackToTop:'YES',
+    navType:'',
+    role: 'master',
+    session:'true',
+    float:'false',
+    baseURI:window.GLOBAL.system['enterpriseportalServer']
+  });
+
+  
+  var sys = window.GLOBAL.system
+  jQuery.ajax({
+    type: "get",
+    url: sys['enterpriseportalServer'] + "/portal/blackBarNav.json",
+    dataType: "jsonp",
+    jsonp: "jsonpCallback",
+    jsonpCallback:"handle",
+    success: function(res){
+      // 灰度标示
+      var productGray = res.productGray
+      var menu = res.menu
+      if (productGray === true) {
+          var menus = []
+          jQuery.each(menu, function(index, item) {
+            menus.push('<li><a class="ent-uri-placeholder" target="_blank" href="' + item.url + '">'+ item.name + '</a></li>')
+          })
+          jQuery('#J_service .links').html(menus.join(''))
+      }
+    },
+    error: function(){
+      throw new Error('blackBarNav查询失败')
+    }
+  });
+
+});
+
+seajs.use(['arale/detector/1.3.0/detector'],function(d){
+  var n,p,i=0,arr=[],innerArr;
+  for(n in d){
+    if(typeof d[n] == 'object'){
+      innerArr = [];
+      for(p in d[n]){
+        innerArr.push(p + ' : ' + d[n][p]);
+      }
+      arr.push(innerArr);
+    }
+  }
+});
+
+// 企业版导航埋点数据
+try {
+  window.Tracker.click("entNavUnify_" + window.location.host);
+} catch(e) {}
+</script>
+<!-- FD:151:morderprod/sp/nav/blacknav/enterprise.vm:END --><!-- FD:151:morderprod/sp/nav/blacknav/head.vm:END -->
+<script>
+        </script>
+<div class="body">
+    <div class="body-container">
+        <!-- FD:151:morderprod/sp/nav/commonnav/commonnav.vm:START --><style>
+  .enterprise-portal .nav-qr-code-wrap .nav-qr-code-layer {
+    z-index: 9999;
+  }
+
+  ul, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .common-nav-wrapper {
+    background: #fff;
+    height: 72px;
+  }
+
+  .common-nav-wrapper .common-nav{
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .common-nav-wrapper .logo {
+    margin-top: 8px;
+    float: left;
+  }
+
+  .common-nav-wrapper .logo img {
+    width: 202px;
+    height: 56px;
+  }
+
+  .common-nav-wrapper .common-nav-items {
+    float: left;
+    list-style: none;
+    margin-left: 90px;
+  }
+
+  .common-nav-wrapper .common-nav-item {
+    float: left;
+    height: 72px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .common-nav-wrapper .common-nav-item a {
+    color: #444;
+    text-decoration: none;
+    padding: 32px;
+    display: block;
+    text-align: center;
+    width: auto;
+    font-size: 16px;
+    line-height: 1;
+    font-family: Microsoft YaHei,Helvetica Neue,Tahoma,sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .common-nav-wrapper .common-nav-item-active{
+    border-bottom: 2px solid #19ACF7;
+  }
+
+  .common-nav-wrapper .common-nav-item-active a{
+    color: #19ACF7;
+  }
+
+  .common-nav-wrapper .common-nav-item a:hover{
+    color: #19ACF7;
+  }
+
+  .common-nav-wrapper .common-nav-item:hover{
+    border-bottom: 2px solid #19ACF7;
+  }
+</style>
+
+<div class="common-nav-wrapper fn-clear">
+  <div class="common-nav">
+    <div class="logo">
+            <a id="J_logoHomeUrl" href="https://b.alipay.com/index.htm">
+        <img src="./卖出交易_files/DIhzhUhSJHCjzni.png" alt="蚂蚁金服／商家中心">
+      </a>
+    </div>
+    <ul class="fn-clear common-nav-items">
+            <li class="common-nav-item ">
+        <a href="https://b.alipay.com/" seed="miNavItem-entUriPlaceholderT3" smartracker="on">首页</a>
+      </li>
+            <li class="common-nav-item common-nav-item-active ">
+        <a href="https://enterpriseportal.alipay.com/portal/navDispatch.htm?menuTitle=mc.tradeCenter" seed="miNavItem-entUriPlaceholderT3" smartracker="on">对账中心</a>
+      </li>
+            <li class="common-nav-item ">
+        <a href="https://b.alipay.com/signing/productSet.htm?navKey=all" seed="miNavItem-entUriPlaceholderT3" smartracker="on">产品中心</a>
+      </li>
+            <li class="common-nav-item ">
+        <a href="https://market.alipay.com/activity/enter.htm" seed="miNavItem-entUriPlaceholderT3" smartracker="on">运营中心</a>
+      </li>
+            <li class="common-nav-item ">
+        <a href="https://enterpriseportal.alipay.com/index.htm" seed="miNavItem-entUriPlaceholderT3" smartracker="on">我的商家服务</a>
+      </li>
+          </ul>
+        <!-- FD:151:morderprod/sp/nav/qr/qrcode.vm:START --><!-- FD:151:morderprod/sp/nav/qr/qrcode.vm:1105:nav/logoNav.schema:logo/导航-极简签约:START -->
+    <a href="javascript:;" class="nav-qr-code-wrap">
+        <span class="nav-qr-code-toggle">商家中心<span class="spIconfont"></span></span>
+        <div class="nav-qr-code-layer">
+            <img src="./卖出交易_files/dd2224bd-318e-4345-bea5-b43b02a2a383.png" class="nav-qr-code-image">
+            <div class="nav-qr-code-desc"><div style="line-height:1.2">用支付宝扫码关注<br>接收重要信息</div></div>
+        </div>
+    </a>
+<!-- FD:151:morderprod/sp/nav/qr/qrcode.vm:1105:nav/logoNav.schema:logo/导航-极简签约:END -->
+<!-- FD:151:morderprod/sp/nav/qr/qrcode.vm:END -->  </div>
+</div>
+<!-- FD:151:morderprod/sp/nav/commonnav/commonnav.vm:END -->
+        <div class="container-wrapper">
+            <div class="container-box">
+                
+<!-- FD:151:morderprod/sp/nav/tile/sidebarTile.vm:START --><script src="./卖出交易_files/saved_resource(1)">
+</script>
+<script>
+(function loader(){if(window.Tracert){return}var Tracert={_isInit:true,_readyToRun:[],call:function(){var args=arguments;var argsList;try{argsList=[].slice.call(args,0)}catch(ex){var argsLen=args.length;argsList=[];for(var i=0;i<argsLen;i++){argsList.push(args[i])}}Tracert.addToRun(function(){Tracert.call.apply(Tracert,argsList)})},addToRun:function(_fn){var fn=_fn;if(typeof fn==="function"){fn._logTimer=(new Date())-0;Tracert._readyToRun.push(fn)}},};var fnlist=["config","logPv","info","err","click","expo","pageName","pageState","time","timeEnd","parse","expoCheck","stringify","report"];for(var i=0;i<fnlist.length;i++){var fn=fnlist[i];(function(fn){Tracert[fn]=function(){var args=arguments;var argsList;try{argsList=[].slice.call(args,0)}catch(ex){var argsLen=args.length;argsList=[];for(var i=0;i<argsLen;i++){argsList.push(args[i])}}argsList.unshift(fn);Tracert.addToRun(function(){Tracert.call.apply(Tracert,argsList)})}})(fn)}window.Tracert=Tracert})();
+!function(){if(!window.BizLog){var n={_readyToRun:[],call:function(){var o,a=arguments;try{o=[].slice.call(a,0)}catch(i){var u=a.length;o=[];for(var c=0;u>c;c++)o.push(a[c])}n.addToRun(function(){n.call.apply(n,o)})},addToRun:function(o){"function"==typeof o&&(o._logTimer=new Date-0,n._readyToRun.push(o))}};window.BizLog=n}}();
+window.BizLog.call('config', { disabled: true });
+</script>
+
+<script src="./卖出交易_files/index.js" charset="utf-8"></script>
+
+<!-- FD:151:morderprod/sp/nav/tile/sidebarTile.vm:4021:nav/tile/sidebarTile.schema:商家中心左侧导航图标配置:START -->
+<link rel="stylesheet" href="./卖出交易_files/font_91245_91abcwvipzgds4i.css">
+<style>
+   .container-box {
+     margin: 24px auto 0;
+     width: 1200px;
+     min-height: 280px;
+     background: #fff;
+     padding-bottom: 10px;
+   }
+   .container-box:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+   }
+
+.col-left-wrapper {
+     width: 160px;
+     background: #fff;
+     float:left;
+     border-right: 1px solid #e9e9e9;
+ }
+ .col-right-wrapper {
+     margin-left: 159px;
+     border-left: 1px solid #e9e9e9;
+ }
+
+  .slide-menu {
+    position: relative;
+    z-index: 102;
+  }
+
+  .slide-menu-title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    margin-left: 52px;
+    color: #B4B4B4;
+  }
+
+  .menu-icon {
+    position: relative;
+  }
+
+  .menu-icon-wrapper {
+    width: 14px;
+    height: 14px;
+    left: 26px;
+    top: 9px;
+    position: absolute;
+  }
+
+  .menu-link {
+    position: relative;
+    font-size: 14px;
+    color: #1D1D1D;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 53px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .menu-link:hover {
+    color: #108EE9;
+  }
+  .menu-item-level-1 {
+    color: #989898;
+    cursor: default;
+    border-top: 1px solid #e9e9e9;
+  }
+
+  .menu-link-icon {
+    color: #989898;
+   }
+  .menu-leaf .menu-link-icon {
+    color: #1D1D1D;
+  }
+     .menu-leaf .heightLightIcon {
+      color: #108EE9;
+     }
+
+         .menu-leaf .menu-icon:hover .menu-link-icon{
+         color: #108EE9;
+         }
+
+  .menu-item-level-1:hover {
+    color: #989898;
+  }
+    .menu-leaf .menu-link.menu-item-level-1 {
+      color: #1D1D1D;
+      cursor: pointer;
+    }
+   .menu-leaf  .menu-link.menu-item-level-1:hover {
+      color: #108EE9;
+    }
+    .menu-leaf  .menu-link.menu-item-level-1.heightLight {
+          color: #108EE9;
+        }
+
+
+  .menu-item-level-2 {
+    cursor: pointer;
+    font-size: 12px;
+  }
+  a:link, a:visited {text-decoration: none;}
+  a:hover, a:active {text-decoration: none;}
+
+  .open{
+    width: 8px;
+    height: 6px;
+    position: absolute;
+    top: 45%;
+    right: 23px;
+    background: url(https://zos.alipayobjects.com/rmsportal/FlmUMyIfXKhQjcP.png) no-repeat;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-size: 8px 5px;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease;
+  }
+  .menu-item-level-3 {
+    padding-left: 58px;
+    font-size: 12px;
+  }
+
+  .menu-leaf:hover, .menu-can-toggled:hover {
+    color: #108ee9;
+    text-decoration: none;
+    background-color: #F2FAFF;
+  }
+  .open.active {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  .heightLight {
+    border-left: 3px solid #04A4FF;
+    color: #108EE9;
+    text-indent: -3px;
+    background: #F2FAFF;
+  }
+
+
+</style>
+<div class="col-left-wrapper">
+   <input type="hidden" menu-data-list="{&quot;children&quot;:[{&quot;children&quot;:[{&quot;children&quot;:[],&quot;current&quot;:true,&quot;name&quot;:&quot;卖出交易&quot;,&quot;id&quot;:&quot;1006&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:4,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/tradeListQuery.htm&quot;,&quot;parentId&quot;:&quot;924&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.tradeListQuery&quot;,&quot;viewOrder&quot;:&quot;1&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|101|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;交易退款&quot;,&quot;id&quot;:&quot;1007&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:4,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/refundListQuery.htm&quot;,&quot;parentId&quot;:&quot;924&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.refundListQuery&quot;,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|101|102&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;买入交易&quot;,&quot;id&quot;:&quot;1008&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:4,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/buyerTradeListQuery.htm&quot;,&quot;parentId&quot;:&quot;924&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.buyerTradeListQuery&quot;,&quot;viewOrder&quot;:&quot;3&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|101|103&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null}],&quot;current&quot;:false,&quot;name&quot;:&quot;交易查询&quot;,&quot;id&quot;:&quot;924&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:2,&quot;url&quot;:&quot;&quot;,&quot;parentId&quot;:&quot;908&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:true,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.tradeListQuery&quot;,&quot;viewOrder&quot;:&quot;1&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|101|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;icon-filetext&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;账务明细&quot;,&quot;id&quot;:&quot;1010&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:4,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/fundAccountDetail.htm&quot;,&quot;parentId&quot;:&quot;925&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.fundAccountDetail&quot;,&quot;viewOrder&quot;:&quot;1&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|102|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;结算明细&quot;,&quot;id&quot;:&quot;1011&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:4,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/fundSettleDetail.htm&quot;,&quot;parentId&quot;:&quot;925&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.fundSettleDetail&quot;,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|102|102&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null}],&quot;current&quot;:false,&quot;name&quot;:&quot;资金查询&quot;,&quot;id&quot;:&quot;925&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:2,&quot;url&quot;:&quot;&quot;,&quot;parentId&quot;:&quot;908&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:true,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.fundAccountDetail&quot;,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|102|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;icon-filetext&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;账单下载&quot;,&quot;id&quot;:&quot;930&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:3,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/dailyBillQuery.htm&quot;,&quot;parentId&quot;:&quot;922&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.dailyBillQuery&quot;,&quot;viewOrder&quot;:&quot;1&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|103|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;服务费账单&quot;,&quot;id&quot;:&quot;931&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:3,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/serviceFeeBillQuery.htm&quot;,&quot;parentId&quot;:&quot;922&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.serviceFeeBillQuery&quot;,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|104|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null}],&quot;current&quot;:false,&quot;name&quot;:&quot;对账管理&quot;,&quot;id&quot;:&quot;922&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:2,&quot;url&quot;:&quot;&quot;,&quot;parentId&quot;:&quot;908&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:true,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:null,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|103&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;icon-barchart&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;发票查询&quot;,&quot;id&quot;:&quot;929&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:3,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/mctArInvoiceListQuery.htm&quot;,&quot;parentId&quot;:&quot;921&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.mctArInvoiceListQuery&quot;,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|106|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null}],&quot;current&quot;:false,&quot;name&quot;:&quot;发票管理&quot;,&quot;id&quot;:&quot;921&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:2,&quot;url&quot;:&quot;&quot;,&quot;parentId&quot;:&quot;908&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:true,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:null,&quot;viewOrder&quot;:&quot;4&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|102&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;icon-fapiaoguanli&quot;,&quot;subjectType&quot;:null},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;current&quot;:false,&quot;name&quot;:&quot;电子凭证&quot;,&quot;id&quot;:&quot;928&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:3,&quot;url&quot;:&quot;https://mbillexprod.alipay.com/enterprise/ereceiptApply.htm&quot;,&quot;parentId&quot;:&quot;1026&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter.electronicReceiptApply&quot;,&quot;viewOrder&quot;:&quot;1&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|105|101&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null}],&quot;current&quot;:false,&quot;name&quot;:&quot;凭证管理&quot;,&quot;id&quot;:&quot;1026&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:2,&quot;url&quot;:&quot;&quot;,&quot;parentId&quot;:&quot;908&quot;,&quot;firstLevel&quot;:false,&quot;secondLevel&quot;:true,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:null,&quot;viewOrder&quot;:&quot;5&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000|102&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;icon-pingzhengguanli&quot;,&quot;subjectType&quot;:null}],&quot;current&quot;:false,&quot;name&quot;:&quot;对账中心&quot;,&quot;id&quot;:&quot;908&quot;,&quot;type&quot;:&quot;BIND_SUBJECT&quot;,&quot;level&quot;:1,&quot;url&quot;:&quot;https://enterpriseportal.alipay.com/portal/navDispatch.htm?menuTitle=mc.tradeCenter&quot;,&quot;parentId&quot;:&quot;0&quot;,&quot;firstLevel&quot;:true,&quot;secondLevel&quot;:false,&quot;productCode&quot;:&quot;MC_TRADE_CENTER&quot;,&quot;title&quot;:&quot;mc.tradeCenter&quot;,&quot;viewOrder&quot;:&quot;2&quot;,&quot;appId&quot;:&quot;60000&quot;,&quot;functionCode&quot;:&quot;000&quot;,&quot;logo1&quot;:&quot;&quot;,&quot;logo2&quot;:&quot;&quot;,&quot;subjectType&quot;:null}" id="list">
+  <input type="hidden" issinglepage="" id="isSinglePage">
+    <div class="slide-menu-title" id="menu-main-nav">
+    <span class="menu-nav">对账中心</span></div>
+    <div id="slide-menu"><ul class="menu"><div class="step1"><li class="menu-item"><div class="menu-wrapper menu-icon"><span class="menu-link menu-item-level-1">交易查询</span><div class="menu-icon-wrapper"><i class="menu-link-icon iconfont icon-filetext"></i></div></div><ul class="menu sub-menu"><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E5%8D%96%E5%87%BA%E4%BA%A4%E6%98%93^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FtradeListQuery.htm" href="https://mbillexprod.alipay.com/enterprise/tradeListQuery.htm"><span class="menu-link menu-item-level-2 heightLight">卖出交易</span></a></div></li><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E4%BA%A4%E6%98%93%E9%80%80%E6%AC%BE^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FrefundListQuery.htm" href="https://mbillexprod.alipay.com/enterprise/refundListQuery.htm"><span class="menu-link menu-item-level-2">交易退款</span></a></div></li><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E4%B9%B0%E5%85%A5%E4%BA%A4%E6%98%93^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FbuyerTradeListQuery.htm" href="https://mbillexprod.alipay.com/enterprise/buyerTradeListQuery.htm"><span class="menu-link menu-item-level-2">买入交易</span></a></div></li></ul></li><li class="menu-item"><div class="menu-wrapper menu-icon"><span class="menu-link menu-item-level-1">资金查询</span><div class="menu-icon-wrapper"><i class="menu-link-icon iconfont icon-filetext"></i></div></div><ul class="menu sub-menu"><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E8%B4%A6%E5%8A%A1%E6%98%8E%E7%BB%86^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FfundAccountDetail.htm" href="https://mbillexprod.alipay.com/enterprise/fundAccountDetail.htm"><span class="menu-link menu-item-level-2">账务明细</span></a></div></li><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E7%BB%93%E7%AE%97%E6%98%8E%E7%BB%86^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FfundSettleDetail.htm" href="https://mbillexprod.alipay.com/enterprise/fundSettleDetail.htm"><span class="menu-link menu-item-level-2">结算明细</span></a></div></li></ul></li></div><li class="menu-item"><div class="menu-wrapper menu-icon"><span class="menu-link menu-item-level-1">对账管理</span><div class="menu-icon-wrapper"><i class="menu-link-icon iconfont icon-barchart"></i></div></div><ul class="menu sub-menu"><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E8%B4%A6%E5%8D%95%E4%B8%8B%E8%BD%BD^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FdailyBillQuery.htm" href="https://mbillexprod.alipay.com/enterprise/dailyBillQuery.htm"><span class="menu-link menu-item-level-2">账单下载</span></a></div></li><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E6%9C%8D%E5%8A%A1%E8%B4%B9%E8%B4%A6%E5%8D%95^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FserviceFeeBillQuery.htm" href="https://mbillexprod.alipay.com/enterprise/serviceFeeBillQuery.htm"><span class="menu-link menu-item-level-2">服务费账单</span></a></div></li></ul></li><li class="menu-item"><div class="menu-wrapper menu-icon"><span class="menu-link menu-item-level-1">发票管理</span><div class="menu-icon-wrapper"><i class="menu-link-icon iconfont icon-fapiaoguanli"></i></div></div><ul class="menu sub-menu"><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E5%8F%91%E7%A5%A8%E6%9F%A5%E8%AF%A2^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FmctArInvoiceListQuery.htm" href="https://mbillexprod.alipay.com/enterprise/mctArInvoiceListQuery.htm"><span class="menu-link menu-item-level-2">发票查询</span></a></div></li></ul></li><li class="menu-item"><div class="menu-wrapper menu-icon"><span class="menu-link menu-item-level-1">凭证管理</span><div class="menu-icon-wrapper"><i class="menu-link-icon iconfont icon-pingzhengguanli"></i></div></div><ul class="menu sub-menu"><li class="menu-item menu-leaf"><div class="menu-wrapper"><a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="functionName=%E7%94%B5%E5%AD%90%E5%87%AD%E8%AF%81^functionUrl=https%3A%2F%2Fmbillexprod.alipay.com%2Fenterprise%2FereceiptApply.htm" href="https://mbillexprod.alipay.com/enterprise/ereceiptApply.htm"><span class="menu-link menu-item-level-2">电子凭证</span></a></div></li></ul></li></ul></div>
+</div>
+
+
+<script>
+  jQuery(function () {
+    var isSinglePage = jQuery('#isSinglePage').attr('isSinglePage'); //单页标志位
+
+    var menuData = JSON.parse(jQuery('#list').attr('menu-data-list'));
+
+    // 一级目录
+    var menuTopTitle = jQuery('<span class="menu-nav"></span>');
+    menuTopTitle.text(menuData.name);
+    jQuery('#menu-main-nav').append(menuTopTitle);
+    // 开始根据数据产生菜单
+    var menu = fibonacciMenu(menuData.children, 1);
+    // 将内存中的dom添加到页面
+    jQuery('#slide-menu').html(menu);
+
+    function fibonacciMenu(menuTree, depth){
+
+      if(depth > 3)
+        return 1;
+
+      var menuUl = jQuery('<ul class="menu"></ul>')
+      if(depth > 1) {
+        menuUl.addClass('sub-menu');
+      }
+
+
+      for (var i = 0; i < menuTree.length; i++) {  // 循环主菜单
+        var menuModel = menuTree[i];
+        var menuItem = jQuery('<li class="menu-item"></li>');
+        var menuName = jQuery('<span class="menu-link"></span>');
+        var menuWrapper = jQuery('<div class="menu-wrapper"></div>');
+
+
+        menuName
+          .text(menuModel.name);
+
+        menuWrapper.append(menuName)
+        menuItem.append(menuWrapper)
+        menuUl.append(menuItem);
+        menuName.addClass('menu-item-level-' + depth);
+
+        if(depth === 1){
+          var iconWrapper = jQuery('<div class="menu-icon-wrapper"></div>');
+          var icon = jQuery('<i class="menu-link-icon iconfont"></i>');
+           icon.addClass(menuModel.logo2);
+          menuWrapper.addClass('menu-icon');
+          menuWrapper.append(iconWrapper.append(icon));
+        }
+        if(depth > 1 && menuModel.children.length){
+          menuName.append('<span class="open"></span>');
+          menuWrapper.addClass('menu-can-toggled');
+        }
+
+        if(menuModel.children.length){
+          menuItem.append(fibonacciMenu(menuModel.children, depth+1))
+        } else {
+          menuItem.addClass('menu-leaf');
+          if(menuModel.current && !isSinglePage ){
+            menuName.addClass('heightLight');
+
+          }
+            if(menuModel.current && !isSinglePage && depth === 1 ){
+                                 icon.addClass('heightLightIcon');
+                                }
+
+          // 单页选中解决方案，实际上是破坏了单页的结构
+          // 取URL hash 值
+          var reg1 = /#\/([\w\d-_]+)/;
+          var hasHash = false;
+          var hashValue = "";
+          if (reg1.exec(window.location.hash) && reg1.exec(window.location.hash)[1]){
+            hasHash = true;
+            hashValue = reg1.exec(window.location.hash)[1];
+            if(hashValue === 'myExpiredProduct'){
+            hashValue = 'myProduct';
+            }
+          }
+          if((isSinglePage && menuModel.url && hasHash && menuModel.url.indexOf(hashValue)>-1 ) || (isSinglePage && !hasHash && menuModel.current) ) {
+            menuName.addClass('heightLight');
+               if( depth === 1 ){
+                                             icon.addClass('heightLightIcon');
+                                            }
+          }
+
+          // 给叶子节点 即最底层菜单添加链接
+
+
+          var functionName = window.encodeURIComponent(menuModel.name);
+          var functionUrl = window.encodeURIComponent(menuModel.url);
+          var dataSpmParam = 'functionName=' + functionName + '^functionUrl=' + functionUrl;
+          var menuItemLink = jQuery('<a class="menu-item-link" data-aspm-click="c56370000.d89090000" data-aspm-param="' + dataSpmParam + '"></a>');
+
+          menuItemLink.attr('href', menuModel.url || '');
+          menuName.wrap(menuItemLink);
+        }
+      }
+      return   menuUl;
+
+    }
+    jQuery('.menu-can-toggled').click(function () {
+             jQuery(this).parent().find('.sub-menu').toggle('fast');
+              jQuery(this).find('.open').toggleClass('active');
+
+    });
+
+
+
+
+
+  });
+</script>
+<!-- FD:151:morderprod/sp/nav/tile/sidebarTile.vm:4021:nav/tile/sidebarTile.schema:商家中心左侧导航图标配置:END -->
+<!-- FD:151:morderprod/sp/nav/tile/sidebarTile.vm:END -->
+<style>
+body {
+  background-color: #F3F6F6;
+}
+
+#J_header * {
+    box-sizing: content-box;
+}
+
+#J_nav * {
+    box-sizing: content-box;
+}
+
+.enterprise-portal #container {
+    width: auto;
+    background-color: #eee;
+    padding-top: 32px;
+}
+
+.container-wrapper {
+    width: auto;
+    min-height: 745px;
+    background-color: #eeefef;
+    position:relative;
+}
+
+.container-wrapper .col-right-local {
+    min-height: 744px;
+    min-width: 1040px;
+}
+
+.container-wrapper .col-left-wrapper {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.col-right-local {
+    background-color: #fff;
+    margin-left: 160px;
+    /*border-left: 1px solid #e9e9e9;*/
+}
+
+.col-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 600px;
+    position:relative
+}
+</style>
+<script type="text/javascript">
+seajs.config({
+    alias: {
+        'handlebars': 'gallery/handlebars/1.0.2/handlebars',
+        'calendar': 'arale/calendar/0.9.0/calendar',
+        'calendarCss': 'arale/calendar/0.9.0/calendar.css',
+        'poptip': 'alipay/poptip/1.2.0/poptip',
+        'popup': 'arale/popup/1.0.2/popup',
+        'atip': 'arale/tip/1.1.2/atip',
+        'tip': 'arale/tip/1.2.0/tip',
+        'moment': 'gallery/moment/2.0.0/moment',
+        'store': 'gallery/store/1.3.7/store',
+        '_': 'gallery/underscore/1.4.4/underscore'
+    }
+});
+araleConfig = {
+    combo_host: 'https://a.alipayobjects.com:443',
+    // 
+    combo_path: '/??'
+};
+
+var aDomain=document.domain.split(".");var sDomain=aDomain[aDomain.length-2]+"."+aDomain[aDomain.length-1];document.domain=sDomain;
+</script>
+
+<div class="col-right-local">
+
+<!--[if lte IE 8 ]>
+    <script src="//gw.alipayobjects.com/os/rmsportal/??GRZLfjoAOGcEHVIDIEHv.js,yXmiWnYZFhBvRYFVJQPf.js"></script>
+    <script>
+        window.jQuery('#J_browserUpgrade').removeClass('fn-hide');
+    </script>
+<![endif]-->
+
+<script src="./卖出交易_files/saved_resource(2)"></script>
+
+<script type="text/javascript">
+window.GLOBAL_MDATAPROD_SERVER = "https://luopan.alipay.com";
+window.GLOBAL_TRADEEPORTLET_SERVER_BASE = 'https://tradeeportlet.alipay.com:443'
+</script>
+
+<link rel="stylesheet" charset="utf-8" type="text/css" href="./卖出交易_files/common(1).css" media="all">
+<!--[if lte IE 9]>
+<link rel="stylesheet" charset="utf-8" type="text/css" href="https://a.alipayobjects.com:443/g/industryprod/mbillexprod/0.0.66/common-part.css"/ media="all">
+<link rel="stylesheet" charset="utf-8" type="text/css" href="https://a.alipayobjects.com:443/g/industryprod/mbillexprod/0.0.66/common-part-blessed1.css"/ media="all">
+<link rel="stylesheet" charset="utf-8" type="text/css" href="https://a.alipayobjects.com:443/g/industryprod/mbillexprod/0.0.66/common-part-blessed2.css"/ media="all">
+<link rel="stylesheet" charset="utf-8" type="text/css" href="https://a.alipayobjects.com:443/g/industryprod/mbillexprod/0.0.66/common-part-blessed3.css"/ media="all">
+<![endif]-->
+
+<!--[if IE]>
+    <script type="text/javascript" src="https://gw.alipayobjects.com/os/rmsportal/ImWMwtbLqEklhExqPzjc.js"></script>
+<![endif]-->
+<link charset="utf-8" rel="stylesheet" type="text/css" href="./卖出交易_files/sell-transition-query.css" media="all">
+
+<div id="root"><div data-reactroot=""><div><div class="wrapper___IdpHZ slimWrapper___3TNwp"><!-- react-empty: 5 --><div><div><div class="headDiv___1SijN undefined"><div class="title___2mro8">交易明细</div><div class="rightArea___1sdi0"><div class="headRightWrapper___spwh1"><a href="https://mbillexprod.alipay.com/enterprise/tradeHisQuery.htm">历史交易查询</a><span class="seperator___375ub"> | </span><div class="wrapper___1gM8e"><a href="javascript:void(0)" class="bufferHref___S9KKX" data-aspm-click="page.wrapper___1gM8e-bufferHref___S9KKX"><!-- react-text: 16 -->下载暂存区 <!-- /react-text --><i class="anticon anticon-down"></i></a></div></div></div></div></div></div><div class="filterWrapper___2gN0y"><div class="quickFilter___13KI1"><div class="wrapper___FuOl6 accountSwitcher"><button type="button" class="ant-btn dropDownButton___2v5B_ ant-dropdown-trigger" data-aspm-click="page.wrapper___FuOl6-antBtn"><div><span class="filterSettleAccountName___SgimU">陕西视讯通信有限公司</span><span class="filterSettleAccountEmail___FHtWl">13396508087@189.cn</span></div><div class="iconWrap___xPoRW"><i class="anticon anticon-down"></i></div></button></div><div class="timeRangeWraper___xB-XW"><div class="wrapper___1vNY1"><div class="dateRangeWrapper___3hCAb"><span class="ant-calendar-picker" style="width: 300px;"><span class="ant-calendar-picker-input ant-input"><input readonly="" value="2017-11-03 00:00:00" placeholder="开始日期" class="ant-calendar-range-picker-input" data-aspm-click="page.antCalendarPickerInput-antCalendarRangePickerInput"><span class="ant-calendar-range-picker-separator"> ~ </span><input readonly="" value="2017-11-04 00:00:00" placeholder="结束日期" class="ant-calendar-range-picker-input" data-aspm-click="page.antCalendarPickerInput-antCalendarRangePickerInput"><i class="anticon anticon-cross-circle ant-calendar-picker-clear"></i><span class="ant-calendar-picker-icon"></span></span></span></div><div class="quickTimeSelectWrapper___1nv7h"><div class="quickTimeItem___r5kmW active___PXMMa">今日</div><div class="quickTimeItem___r5kmW">昨日</div><div class="quickTimeItem___r5kmW">最近7天</div><div class="quickTimeItem___r5kmW">最近30天</div></div></div></div><a class="moreQueryTip___ahyDl" href="javascript:void(0)" data-aspm-click="page.quickFilter___13KI1-moreQueryTip___ahyDl" style="display: block;"><!-- react-text: 43 -->更多搜索条件 <!-- /react-text --><i class="anticon anticon-down"></i></a></div><div class="detailFilter___2jVtn" style="display: none;"><form class="ant-form ant-form-horizontal"><div class="ant-row"><div class="ant-col-7"><div class="ant-row ant-form-item multipleInput___15xOB"><div class="ant-col-8 ant-form-item-label"><label class="" title="金额范围">金额范围</label></div><div class="ant-col-16 ant-form-item-control-wrapper"><div class="ant-form-item-control "><div class="multipleInputText___q1Ur3"><div class="ant-row ant-form-item"><div class="ant-form-item-control-wrapper"><div class="ant-form-item-control "><input type="text" placeholder="金额" maxlength="12" value="" id="startAmount" data-__meta="[object Object]" class="ant-input ant-input-lg" data-aspm-click="page.antFormItemControl-startAmount"></div></div></div></div><div class="inputSpliter___UFXHS"> - </div><div class="multipleInputText___q1Ur3"><div class="ant-row ant-form-item"><div class="ant-form-item-control-wrapper"><div class="ant-form-item-control "><input type="text" placeholder="金额" maxlength="12" value="" id="endAmount" data-__meta="[object Object]" class="ant-input ant-input-lg" data-aspm-click="page.antFormItemControl-endAmount"></div></div></div></div></div></div></div></div><div class="ant-col-8"><div class="ant-row ant-form-item multipleInput___15xOB"><div class="ant-col-8 ant-form-item-label"><label class="" title="主体范围">主体范围</label></div><div class="ant-col-16 ant-form-item-control-wrapper"><div class="ant-form-item-control "><div class="multipleInputSelectFirst___2tSEH"><div class="ant-row ant-form-item"><div class="ant-form-item-control-wrapper"><div class="ant-form-item-control has-success"><div class="ant-select-lg ant-select ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0"><div class="ant-select-selection__rendered"><div class="ant-select-selection-selected-value" title="分公司" style="display: block; opacity: 1;">分公司</div></div><span class="ant-select-arrow" unselectable="unselectable" style="user-select: none;"><b></b></span></div></div></div></div></div></div><div class="multipleInputSelectSecond___3E2OE"><div class="ant-row ant-form-item"><div class="ant-form-item-control-wrapper"><div class="ant-form-item-control "><input type="text" maxlength="50" value="" id="entityFilterValue" data-__meta="[object Object]" class="ant-input ant-input-lg" data-aspm-click="page.antFormItemControl-entityFilterValue"></div></div></div></div></div></div></div></div><div class="ant-col-9"><div class="ant-row ant-form-item multipleInput___15xOB"><div class="ant-col-8 ant-form-item-label"><label class="" title="精确查询">精确查询</label></div><div class="ant-col-16 ant-form-item-control-wrapper"><div class="ant-form-item-control "><div class="multipleInputSelectFirst___2tSEH"><div class="ant-row ant-form-item"><div class="ant-form-item-control-wrapper"><div class="ant-form-item-control has-success"><div class="ant-select-lg ant-select ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0"><div class="ant-select-selection__rendered"><div class="ant-select-selection-selected-value" title="支付宝交易号" style="display: block; opacity: 1;">支付宝交易号</div></div><span class="ant-select-arrow" unselectable="unselectable" style="user-select: none;"><b></b></span></div></div></div></div></div></div><div class="multipleInputSelectSecond___3E2OE"><div class="ant-row ant-form-item"><div class="ant-form-item-control-wrapper"><div class="ant-form-item-control "><input type="text" maxlength="128" value="" id="precisionValue" data-__meta="[object Object]" class="ant-input ant-input-lg" data-aspm-click="page.antFormItemControl-precisionValue"></div></div></div></div></div></div></div></div></div><div class="ant-row"><div class="ant-col-7"><div class="ant-row ant-form-item"><div class="ant-col-8 ant-form-item-label"><label for="tradeFrom" class="" title="交易分类">交易分类</label></div><div class="ant-col-16 ant-form-item-control-wrapper"><div class="ant-form-item-control has-success"><div class="ant-select-lg ant-select ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0"><div class="ant-select-selection__rendered"><div class="ant-select-selection-selected-value" title="全部" style="display: block; opacity: 1;">全部</div></div><span class="ant-select-arrow" unselectable="unselectable" style="user-select: none;"><b></b></span></div></div></div></div></div></div><div class="ant-col-8"><div class="ant-row ant-form-item"><div class="ant-col-8 ant-form-item-label"><label for="targetMainAccount" class="" title="对方支付宝账号">对方支付宝账号</label></div><div class="ant-col-16 ant-form-item-control-wrapper"><div class="ant-form-item-control "><input type="text" maxlength="50" value="" id="targetMainAccount" data-__meta="[object Object]" class="ant-input ant-input-lg" data-aspm-click="page.antFormItemControl-targetMainAccount"></div></div></div></div><div class="ant-col-9"><div class="ant-row ant-form-item"><div class="ant-col-8 ant-form-item-label"><label for="goodsTitle" class="" title="商品名称">商品名称</label></div><div class="ant-col-16 ant-form-item-control-wrapper"><div class="ant-form-item-control "><input type="text" maxlength="50" value="" id="goodsTitle" data-__meta="[object Object]" class="ant-input ant-input-lg" data-aspm-click="page.antFormItemControl-goodsTitle"></div></div></div></div></div><div class="ant-row"><div class="formOperations___3eGnm"><button type="button" class="ant-btn ant-btn-primary" data-aspm-click="page.formOperations___3eGnm-antBtn"><span>搜 索</span></button><button type="button" class="ant-btn" data-aspm-click="page.formOperations___3eGnm-antBtn"><span>重 置</span></button><a href="javascript:void(0)" data-aspm-click="page.formOperations___3eGnm-link-mbillexprodVoid0"><!-- react-text: 141 -->收起 <!-- /react-text --><i class="anticon anticon-up"></i></a></div></div></form></div></div><div class="transitionTable___93dNL"><div class="tableHeadWrapper___M6pdf"><div class="ant-tabs ant-tabs-top ant-tabs-card"><div role="tablist" class="ant-tabs-bar" tabindex="0"><div class="ant-tabs-nav-container"><div class="ant-tabs-nav-wrap"><div class="ant-tabs-nav-scroll"><div class="ant-tabs-nav ant-tabs-nav-animated"><div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated" style="display: block; transform: translate3d(0px, 0px, 0px); width: 62px;"></div><div role="tab" aria-disabled="false" aria-selected="true" class="ant-tabs-tab-active ant-tabs-tab">全部</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">待付款</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">待发货</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">待确认收货</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">已预付</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">进行中</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">成功</div><div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">关闭</div></div></div></div></div></div><div class="ant-tabs-content ant-tabs-content-no-animated"><div role="tabpanel" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div><div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div></div></div></div><div><div class="careContent___3nOxU empty___1gbHE"><div class="emptyImageWrap___11dbs"><img src="./卖出交易_files/SZWsRReGPEouTBXnCKMb.png"></div><div class="emptyText___2-vw-">暂无记录，请更换条件重新搜索</div></div></div></div><div class="bottomExplainWrapper___3hHW_"><ul><li><div class="explainTitle___13ms_">订单总额：</div><div class="explainContent___3Ad6W">已创建的原始订单金额汇总</div></li><li><div class="explainTitle___13ms_">成交订单总额：</div><div class="explainContent___3Ad6W">已付款完成的订单金额汇总</div></li><li><div class="explainTitle___13ms_">商家实收：</div><div class="explainContent___3Ad6W">商家实际收到的金额汇总</div></li><li><div class="explainTitle___13ms_">商家优惠：</div><div class="explainContent___3Ad6W">交易扣减的商家优惠活动金额汇总</div></li><li><div class="explainTitle___13ms_">实收净额：</div><div class="explainContent___3Ad6W">商家实收-服务费-分润的金额汇总</div></li><li><div class="explainTitle___13ms_">退款总额：</div><div class="explainContent___3Ad6W">退款总金额=退商家实收+退商家优惠</div></li><li><div class="explainTitle___13ms_">服务费：</div><div class="explainContent___3Ad6W">交易扣除的服务费净额汇总，服务费净额为服务费金额-退服务费金额</div></li></ul></div><div class="wrapper___21BW4"></div></div><span style="display: none;"></span></div></div></div>
+
+<script src="./卖出交易_files/common.js" charset="utf-8"> </script>
+<script src="./卖出交易_files/sell-transition-query.js" charset="utf-8"> </script>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="body-footer">
+            <!-- FD:151:morderprod/sp/nav/navFooter.vm:START --><style>
+html, body {
+  background-color: #eeefef !important;
+  background-image: none !important;
+}
+.mpFooterWrap {
+  background-color: #eeefef;
+}
+.mpFooterWrap.home {
+  background-color: #fff;
+}
+.mpFooterWrap:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 1200px;
+  background-color: transparent;
+  margin: 20px auto;
+}
+.home.mpFooterWrap:before {
+  background-color: #ddd;
+}
+.mpCopyRight,
+.mpFooterLinks {
+  display: block;
+  text-align: center;
+  line-height: 2.4;
+  font-size: 12px;
+  color: #B7B7B7;
+}
+.mpFooterLinks li {
+  display: inline-block;
+}
+.mpFooterLinks li + li:before {
+  content: '|';
+  display: inline-block;
+  padding: 0 12px;
+}
+.mpFooterLinks li a {
+  display: inline-block;
+  color: #B7B7B7;
+}
+.mpFooterWrap .server {
+  text-align: center;
+  color: #eeefef;
+}
+</style>
+
+<div class="spFooterWrap mpFooterWrap " id="J_spFooterWrap">
+  <ul class="mpFooterLinks">
+    <li><a href="https://www.antgroup.com/introduction.htm" target="_blank">关于蚂蚁</a></li>
+    <li><a href="https://www.antgroup.com/" target="_blank">蚂蚁金服</a></li>
+    <li><a href="https://www.alipay.com/" target="_blank">支付宝</a></li>
+    <li><a href="https://www.koubei.com/" target="_blank">口碑</a></li>
+    <li><a href="https://www.zmxy.com.cn/" target="_blank">芝麻信用</a></li>
+  </ul>
+  <ul class="mpFooterLinks">
+    <li><a href="http://www.alibabagroup.com/cn/global/home" target="_blank">阿里巴巴集团</a></li>
+    <li><a href="https://www.alibaba.com/" target="_blank">阿里巴巴国际站</a></li>
+    <li><a href="https://www.1688.com/" target="_blank">1688</a></li>
+    <li><a href="https://www.taobao.com/" target="_blank">淘宝</a></li>
+    <li><a href="https://www.tmall.com/" target="_blank">天猫</a></li>
+    <li><a href="https://ju.taobao.com/" target="_blank">聚划算</a></li>
+    <li><a href="http://www.alimama.com/" target="_blank">阿里妈妈</a></li>
+    <li><a href="https://www.aliyun.com/" target="_blank">阿里云计算</a></li>
+  </ul>
+  <span class="mpCopyRight">Copyright &#169; 2017 蚂蚁金融服务集团 | ICP证: 沪ICP备15027489号-2</span>
+  <div class="server">mbillexprod-49-5005</div>
+</div>
+
+<!-- FD:174:alipay/foot/cliveService.vm:START --><!-- FD:174:alipay/foot/cliveService.vm:1261:cliveService.schema:在线客服配置:START -->
+    <div style="display:none">onlineServer</div>
+    <script type="text/javascript">
+    try {
+        (function () {
+            var loadOnlineServer = function() {
+                seajs.config({
+                    comboExcludes: /\/u\/(js|css|cschannel|ecmng)\//,
+                    alias: {
+						'$': 'jquery/jquery/1.7.2/jquery',
+                        'onlineServerConfig': 'https://os.alipayobjects.com/rmsportal/iwBOQWtuJpTikoO.js',
+                        'portalServerConfig': 'https://os.alipayobjects.com/rmsportal/FiPHyRpEbxSvFkDoPXIQ.js',
+                        'merchantServerConfig': 'https://gw.alipayobjects.com/os/cschannel/lKDFsSTbKWHPLbaOCJTC.js',
+                        'customerServerConfig': 'https://gw.alipayobjects.com/os/cschannel/BjJfuSqjyLekFXlyVXaZ.js',
+			'koubeiServerConfig': 'https://gw.alipayobjects.com/os/cschannel/aYbyUVaggcvAcFBRwpIF.js',
+			'defaultDataConfig': 'https://a.alipayobjects.com/u/js/201311/1acIoVU1Xx.js',
+                        'onlineServerJS': 'https://gw.alipayobjects.com/os/rmsportal/eOnmwZwLDksWkFpQCMoM.js',//云客服匹配
+                        'onlineServerCSS': 'https://os.alipayobjects.com/rmsportal/OgPAgbONDiKhITIVYmdn.css'//云客服通用样式
+                    }
+                });
+                seajs.use(['onlineServerConfig', 'portalServerConfig','merchantServerConfig','koubeiServerConfig', 'customerServerConfig'], function(){
+                    jQuery(function(){
+                        window.OS = OS = {},
+                        OS.server = {
+                            cliveServer: 'https://clive.alipay.com',
+                            cschannelServer: 'https://cschannel.alipay.com',
+                            initiativeServer: 'https://webpushgw.alipay.com',
+			    cshallServer: 'https://cshall.alipay.com'
+                        },
+                        OS.params = {
+                            'uid': '2088821513795971'
+                        };
+			var tradeNos4Clive = '' || '';
+			OS.params.featureStr = "{'tradeNos':'" + tradeNos4Clive + "'}";
+                        OS.config = {
+                            onlineServerURL: OS.server.cliveServer + '/csrouter.htm',
+                            portalServerURL: OS.server.cschannelServer + '/csrouter.htm',
+			    newPortalServerURL: OS.server.cschannelServer + '/newPortal.htm',
+                            webpushFlashURL: 'https://t.alipayobjects.com/tfscom/T1JsNfXoxiXXXXXXXX.swf',
+                            onlineServerIconDefault: 'https://a.alipayobjects.com/u/css/201401/1v9cu1dxaf.css' //在线客服默认图片
+                        };
+                        seajs.use('onlineServerCSS');
+                        seajs.use('onlineServerJS');
+                    });
+                });
+            }
+            var bindOnlineServer = function(func){
+                var w = window;
+                if (w.attachEvent) {
+                    w.attachEvent('onload', func);
+                } else {
+                    w.addEventListener('load', func, false);
+                }
+            };
+            window.initOnlineServer = function() {
+                var w = window, o = 'seajs', d = document;
+                if(w[o]) { return loadOnlineServer() }
+                var s = d.createElement("script")
+                s.id = o + "node"
+                s.charset = "utf-8";
+                s.type = "text/javascript";
+                s.src = "https://a.alipayobjects.com/??seajs/seajs/2.1.1/sea.js,jquery/jquery/1.7.2/jquery.js";
+                var head = d.head || d.getElementsByTagName( "head" )[0] || d.documentElement;
+                head.appendChild(s);
+                s.onload = s.onreadystatechange = function(){ if (!s.readyState || /loaded|complete/.test(s.readyState)) { loadOnlineServer() } };
+            };
+            if (!window.isLazyLoadOnlineService) {
+                bindOnlineServer(initOnlineServer);
+            };
+        })();
+    } catch (e) {
+        window.console && console.log && console.log(e);
+        window.Tracker && Tracker.click('onlineServer-error-init-' + e);
+    }
+    </script>
+<!-- FD:174:alipay/foot/cliveService.vm:1261:cliveService.schema:在线客服配置:END -->
+
+<!-- FD:174:alipay/foot/cliveService.vm:END --><!-- FD:106:alipay/tracker/tracker.vm:START --><!-- FD:106:alipay/tracker/tracker.vm:785:tracker.schema:全站自动化/性能/敏感信息打点开关:START -->
+
+
+
+<script type="text/javascript">
+window.Smartracker && Smartracker.sow && Smartracker.sow();
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+window.agp_custom_config = {
+  BASE_URL: '//kcart.alipay.com/p.gif',
+  TIMING_ACTION_URL: '//kcart.alipay.com/x.gif'
+}
+
+</script>
+<script charset="utf-8" src="./卖出交易_files/index(1).js"></script>
+
+
+
+
+
+<!-- FD:106:alipay/tracker/sai.vm:START --><script>
+    sensScanConfig={
+        ratio: 0.01,
+        modules: '*',
+        types: '*'
+      };
+</script>
+
+<script src="./卖出交易_files/monitor-sens.min.js"></script>
+<!-- FD:106:alipay/tracker/sai.vm:END -->
+
+
+
+<!-- FD:106:alipay/tracker/cmsbuffer.vm:START --><!-- FD:106:alipay/tracker/cmsbuffer.vm:997:cmsbuffer.schema:main-CMS全站修复:START -->
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+<script>
+try {
+  (function() {
+  var logServer = 'https://magentmng.alipay.com/m.gif';
+  var sample = 0.0001;
+  var url = "https://a.alipayobjects.com/http-watch/1.0.7/index.js";
+
+  // 判断比例
+  if (!!window.addEventListener && Array.prototype.map && Math.random() < sample) {
+    var HEAD = document.head || document.getElementsByTagName('head')[0];
+
+    var spt = document.createElement('script');
+    spt.src = url;
+    HEAD.appendChild(spt);
+
+	setTimeout(function() {
+	  window.httpWatch && window.httpWatch({ sample: 1, appname: 'mbillexprod-49-5005', logServer: logServer });
+	}, 1000);
+  }
+  })();
+} catch(e) {}
+</script>
+
+
+
+<script src="./卖出交易_files/index(2).js"></script>
+<!-- FD:106:alipay/tracker/cmsbuffer.vm:997:cmsbuffer.schema:main-CMS全站修复:END -->
+<!-- FD:106:alipay/tracker/cmsbuffer.vm:END --><!-- FD:106:alipay/tracker/tracker.vm:785:tracker.schema:全站自动化/性能/敏感信息打点开关:END -->
+<!-- FD:106:alipay/tracker/tracker.vm:END --><!-- FD:151:morderprod/sp/nav/navFooter.vm:END -->        </div>
+    </div>
+        
+ 
+<!-- uitpl:/component/tracker.vm -->
+<!-- FD:106:alipay/tracker/tracker.vm:START --><!-- FD:106:alipay/tracker/tracker.vm:785:tracker.schema:全站自动化/性能/敏感信息打点开关:START -->
+
+
+
+<script type="text/javascript">
+window.Smartracker && Smartracker.sow && Smartracker.sow();
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+window.agp_custom_config = {
+  BASE_URL: '//kcart.alipay.com/p.gif',
+  TIMING_ACTION_URL: '//kcart.alipay.com/x.gif'
+}
+
+</script>
+<script charset="utf-8" src="./卖出交易_files/index(1).js"></script>
+
+
+
+
+
+<!-- FD:106:alipay/tracker/sai.vm:START --><script>
+    sensScanConfig={
+        ratio: 0.01,
+        modules: '*',
+        types: '*'
+      };
+</script>
+
+<script src="./卖出交易_files/monitor-sens.min.js"></script>
+<!-- FD:106:alipay/tracker/sai.vm:END -->
+
+
+
+<!-- FD:106:alipay/tracker/cmsbuffer.vm:START --><!-- FD:106:alipay/tracker/cmsbuffer.vm:997:cmsbuffer.schema:main-CMS全站修复:START -->
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+<script>
+try {
+  (function() {
+  var logServer = 'https://magentmng.alipay.com/m.gif';
+  var sample = 0.0001;
+  var url = "https://a.alipayobjects.com/http-watch/1.0.7/index.js";
+
+  // 判断比例
+  if (!!window.addEventListener && Array.prototype.map && Math.random() < sample) {
+    var HEAD = document.head || document.getElementsByTagName('head')[0];
+
+    var spt = document.createElement('script');
+    spt.src = url;
+    HEAD.appendChild(spt);
+
+	setTimeout(function() {
+	  window.httpWatch && window.httpWatch({ sample: 1, appname: 'mbillexprod-49-5005', logServer: logServer });
+	}, 1000);
+  }
+  })();
+} catch(e) {}
+</script>
+
+
+
+<script src="./卖出交易_files/index(2).js"></script>
+<!-- FD:106:alipay/tracker/cmsbuffer.vm:997:cmsbuffer.schema:main-CMS全站修复:END -->
+<!-- FD:106:alipay/tracker/cmsbuffer.vm:END --><!-- FD:106:alipay/tracker/tracker.vm:785:tracker.schema:全站自动化/性能/敏感信息打点开关:END -->
+<!-- FD:106:alipay/tracker/tracker.vm:END -->        
+    <script type="text/javascript">
+    var ASSERTS_SERVER = "https://a.alipayobjects.com:443";
+        </script>
+    <script type="text/javascript" charset="utf-8" src="./卖出交易_files/saved_resource(3)"></script>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" === document.location.protocol) ? "https://" : "http://");
+        document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1253107971'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1253107971' type='text/javascript'%3E%3C/script%3E"));
+    </script><span id="cnzz_stat_icon_1253107971"></span><script src="./卖出交易_files/q_stat.php" type="text/javascript"></script>
+
+    
+
+</body></html>
