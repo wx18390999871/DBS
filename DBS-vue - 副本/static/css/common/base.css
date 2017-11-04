@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+body {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #111;
+    font-family: "Hiragino Sans GB", "Microsoft Yahei", Arial, sans-serif;
+}
+
+/*.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #5ec8ff;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: #2daaff;
+}*/

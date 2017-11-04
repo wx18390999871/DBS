@@ -1,0 +1,261 @@
+/**
+ * File: login.less
+ * Author: weiyabin
+ * Date: 2016年4月20日
+ * Description: 登录页
+ * Copyright: 版权所有 (C) 2014 中国移动 杭州研发中心.
+ */
+
+#app {
+    overflow: auto!important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.logo {
+    height: 68px;
+    padding-left: 25px;
+    line-height: 68px;
+    color: #fff;
+    background: url(../img/header_bg.png) 130px center;
+    font-size: 24px;
+}
+
+.bg-img {
+    position: relative;
+    height: 854px;
+    background: url(../img/bg2.png) center top;
+    background-size: cover;
+}
+
+.login {
+    position: absolute;
+    top: 40%;
+    margin-top: -145px;
+    right: 20%;
+    /* width: 240px; */
+    /*height: 290px;*/
+    background-color: #404040;
+    opacity: .8;
+    padding: 30px 20px;
+}
+
+.login-text {
+    position: absolute;
+    text-align: right;
+    top: 30%;
+    left: 400px;
+    color: #fff;
+}
+
+.btn-F7AC36 {
+    background-color: #F7AC36;
+}
+
+.login-text h1 {
+    font-size: 48px;
+}
+
+.login-text h2 {
+    font-size: 34px;
+    line-height: 37px;
+}
+
+.login-text p  {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 14px;
+}
+
+
+.login h1 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.login .error-reminder {
+    width: 240px;
+    height: 22px;
+    padding: 0 28px;
+    line-height: 22px;
+    color: #eb604a;
+    border: 1px solid #eb604a;
+    font-size: 11px;
+    background: url(../img/error-icon.png) 8px center no-repeat;
+    background-color: #fbdfdb;
+}
+
+.login ul li {
+    position: relative;
+    margin: 8px 0;
+}
+
+.login input {
+    width: 240px;
+    height: 36px;
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+.login ul li .verify-change {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+}
+
+.login .verify-change img {
+    width: 76px;
+    height: 25px;
+}
+
+.login .login-btn {
+    margin-top: 20px;
+}
+
+.login .login-btn button {
+    width: 240px;
+}
+
+.form-sole label.invalid {
+    margin-top: 8px;
+    padding: 0 8px;
+    font-size: 12px;
+    color: red;
+}
+
+.el-button--primary:focus, .el-button--primary:hover {
+    background: #F7AC36;
+    border-color: #F7AC36;
+    color: #fff;
+}
+.el-button--primary {
+    border-color: #F7AC36;
+}
